@@ -1,5 +1,18 @@
 const core = require("@actions/core")
-const exec = require("ssh")
+// const exec = require("ssh")
+const {NodeSSH} = require("node-ssh");
+
+async function exec(config) {
+    const ssh = new NodeSSH();
+    const res = await ssh.connect({
+        ...config
+    }).then(async client => {
+        return await client.execCommand(config.script)
+    })
+
+    ssh.dispose()
+    return res
+}
 
 async function run() {
     const username = core.getInput("username")

@@ -1,13 +1,14 @@
 {
-  "name": "javascript-action",
+  "name": "ssh-action",
   "version": "1.0.0",
-  "description": "JavaScript Action Template",
+  "description": "ssh utils",
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint .",
     "prepare": "ncc build src/index.js -o dist --source-map --license licenses.txt",
     "test": "jest",
-    "all": "npm run lint && npm run prepare && npm run test"
+    "all": "npm run lint && npm run prepare && npm run test",
+    "run": "ncc run ./src/index.js"
   },
   "repository": {
     "type": "git",

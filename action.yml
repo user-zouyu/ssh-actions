@@ -1,0 +1,28 @@
+name: 'ssh-action'
+description: 'ssh utils'
+inputs:
+  host:
+    description: 'host'
+    required: true
+  port:
+    description: 'port'
+    required: false
+    default: '22'
+  username:
+    description: 'username'
+    required: true
+    default: 'root'
+  password:
+    description: 'password'
+    required: true
+  script:
+    description: 'shell script'
+    required: true
+
+outputs:
+  log:
+    description: 'exec log'
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'

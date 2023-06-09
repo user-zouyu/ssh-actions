@@ -30,10 +30,10 @@ jobs:
       - name: test actions
         uses: user-zouyu/ssh-actions@main
         with:
-          host: ${HOST}
-          port: ${PORT}
-          username: ${USERNAME}
-          password: ${PASSWORD}
+          host: ${{HOST}}
+          port: ${{PORT}}
+          username: ${{USERNAME}}
+          password: ${{PASSWORD}}
           script: |
             ls -al
             pwd

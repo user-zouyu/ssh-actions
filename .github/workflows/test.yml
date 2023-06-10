@@ -33,4 +33,6 @@ jobs:
   echo:
     runs-on: ubuntu-20.04
     steps:
-      - uses: "echo hello_world"
+      - uses: actions/checkout@v3
+      - name: "ls"
+        run: "ls -al"

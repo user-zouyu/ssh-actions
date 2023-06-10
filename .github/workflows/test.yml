@@ -18,7 +18,6 @@ on:
 jobs:
   check-dist:
     runs-on: ubuntu-latest
-
     steps:
       - name: test actions
         uses: user-zouyu/ssh-actions@main
@@ -31,3 +30,7 @@ jobs:
             ls -al
             pwd
             docker ps
+  echo:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: "echo hello_world"

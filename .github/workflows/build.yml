@@ -26,7 +26,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Rebuild the dist/ directory
+      - name: Rebuild the dist/  directory
         run: npm run prepare
 
       - name: Compare the expected and actual dist/ directories

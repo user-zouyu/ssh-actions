@@ -16,20 +16,20 @@ on:
   workflow_dispatch:
 
 jobs:
-  check-dist:
-    runs-on: ubuntu-latest
-    steps:
-      - name: test actions
-        uses: user-zouyu/ssh-actions@main
-        with:
-          host: ${{ secrets.HOST }}
-          port: ${{ secrets.PORT }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          script: |
-            ls -al
-            pwd
-            docker ps
+#  check-dist:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: test actions
+#        uses: user-zouyu/ssh-actions@main
+#        with:
+#          host: ${{ secrets.HOST }}
+#          port: ${{ secrets.PORT }}
+#          username: ${{ secrets.USERNAME }}
+#          password: ${{ secrets.PASSWORD }}
+#          script: |
+#            ls -al
+#            pwd
+#            docker ps
   echo:
     runs-on: ubuntu-20.04
     steps:
